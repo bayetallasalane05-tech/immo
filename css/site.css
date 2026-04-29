@@ -1,0 +1,182 @@
+/* ==========================================
+   VARIABLES ET CONFIGURATION GÉNÉRALE
+   ========================================== */
+:root {
+    --royal-red: #b0301d;      /* Rouge brique (Senegindia) */
+    --royal-terracotta: #b05a46; /* Footer Terracotta */
+    --royal-dark: #222222;
+    --royal-light: #f8f9fa;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   HEADER & TOP-BAR (Référence Image 6)
+   ========================================== */
+.top-header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.top-header i {
+    color: var(--royal-red);
+}
+
+.navbar-dark {
+    background-color: var(--royal-red) !important;
+}
+
+.nav-link {
+    transition: background 0.3s;
+}
+
+.nav-link:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+/* ==========================================
+   SECTION HERO : VIDÉO & RECHERCHE (Image 8)
+   ========================================== */
+.hero-video-section {
+    position: relative;
+    height: 85vh; /* Hauteur de la section vidéo */
+    min-height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Filtre pour rendre le texte lisible */
+}
+
+/* Barre de recherche arrondie (Inspirée Image 8) */
+.search-bar-container {
+    max-width: 950px;
+    width: 90%;
+    background: white;
+    border-radius: 50px; /* Bordure très arrondie */
+    padding: 10px 20px;
+}
+
+.btn-royal-search {
+    background-color: var(--royal-red);
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s;
+}
+
+.btn-royal-search:hover {
+    transform: scale(1.1);
+    background-color: var(--royal-dark);
+}
+
+/* ==========================================
+   NOS OFFRES EXCLUSIVES (Référence Image 1 & 4)
+   ========================================== */
+.card-exclusive {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card-exclusive:hover {
+    transform: translateY(-10px);
+}
+
+.badge-status {
+    background-color: var(--royal-red);
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+/* ==========================================
+   PAR CATÉGORIES (Référence Image 1)
+   ========================================== */
+.category-card {
+    position: relative;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.category-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.category-card:hover img {
+    transform: scale(1.1);
+}
+
+.category-card:hover .category-overlay {
+    background: rgba(176, 48, 29, 0.7); /* Rouge RoyalImmo au survol */
+}
+
+/* ==========================================
+   FOOTER (Référence Image 5 & 7)
+   ========================================== */
+footer {
+    background-color: var(--royal-terracotta);
+    color: white;
+}
+
+footer a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: underline;
+}
