@@ -4,7 +4,7 @@ include('includes/header.php');
 $host = 'localhost'; 
 $dbname = 'SALANE_BASE_DE_DONNEE'; 
 $user = 'root'; 
-$pass = '';
+$pass = ' ';
 
 try {
     $db = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $user, $pass);
